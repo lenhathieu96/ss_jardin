@@ -6,4 +6,7 @@ export type AuthorizedParamList = {
   dashboard: undefined;
 };
 
-export type RootParamList = AuthorizedParamList & UnAuthorizedParamList;
+export type RootParamList = {
+  authorized: AuthorizedParamList;
+  unauthorized: UnAuthorizedParamList;
+};

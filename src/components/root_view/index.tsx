@@ -4,6 +4,7 @@ import { SafeAreaView, StyleSheet, View, ViewProps } from "react-native";
 import styles from "./styles";
 
 interface RootViewProps extends Omit<ViewProps, "children"> {
+  /**@default true */
   useSafeArea?: boolean;
   children: React.ReactNode;
 }
