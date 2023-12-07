@@ -1,0 +1,49 @@
+{
+  "extends": "@tsconfig/react-native/tsconfig.json",
+  "compilerOptions": {
+    "module": "NodeNext",
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "noImplicitAny": false,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "experimentalDecorators": true,
+    "noUnusedLocals": true,
+    "useDefineForClassFields": true,
+    "sourceMap": true,
+    "skipLibCheck": true,
+    "jsx": "react-native",
+    "moduleResolution": "NodeNext",
+    "resolveJsonModule": true,
+    "noEmit": true,
+    "strict": true,
+    "alwaysStrict": true,
+    "strictNullChecks": true,
+    "target": "ESNext",
+    "baseUrl": ".",
+    "paths": {
+      "@assets/*": ["src/assets/*"],
+      "@utils/*": ["src/utils/*"],
+      
+      "@components": ["src/components"],
+      "@components/*": ["src/components/*"],
+      
+      "@screens": ["src/screens"],
+      "@screens/*": ["src/screens/*"],
+      
+      "@navigation": ["src/navigation"],
+      "@navigation/*": ["src/navigation/*"],
+
+      "@themes": ["src/themes"],
+      "@app/*": ["src/*"]
+    }
+  },
+  "exclude": [
+    "node_modules",
+    "babel.config.js",
+    "metro.config.js",
+  ],
+  "include": ["index.js", "src"]
+}
