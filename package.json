@@ -3,8 +3,12 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
+    "setup": "yarn dependencies:clean & yarn ios:clean && yarn android:clean && yarn install && yarn postinstall",
+    "dependencies:clean": "yarn cache clean && rm -rf node_modules & rm -rf yarn.lock",
     "android": "react-native run-android",
+    "android:clean": "cd android && ./gradlew clean && cd ..",
     "ios": "react-native run-ios --simulator='iPhone 15'",
+    "ios:clean": "cd ios && rm -rf build && rm -rf Podfile.lock && pod deintegrate && rm -rf Pods && cd ..",
     "lint": "eslint index.js src --fix --ext .ts,.tsx",
     "start": "watchman watch-del . && react-native start --reset-cache",
     "test": "jest",
@@ -23,6 +27,7 @@
     "@babel/preset-env": "^7.20.0",
     "@babel/preset-typescript": "^7.23.3",
     "@babel/runtime": "^7.20.0",
+    "@commitlint/config-conventional": "^18.4.3",
     "@evilmartians/lefthook": "^1.5.5",
     "@react-native/eslint-config": "^0.72.2",
     "@react-native/metro-config": "^0.72.11",
@@ -51,5 +56,10 @@
   },
   "engines": {
     "node": ">=16"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
   }
 }

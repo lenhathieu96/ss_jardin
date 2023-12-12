@@ -1,9 +1,8 @@
-import { Text, View } from "react-native";
+import BaseButton from "./base_button";
+import { BaseButtonProps } from "./index.props";
 
-export default function Button() {
-  return (
-    <View>
-      <Text>Button</Text>
-    </View>
-  );
+function Button(props: Readonly<BaseButtonProps>) {
+  return <BaseButton {...props} />;
 }
+
+export default Button;
