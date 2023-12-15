@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
     ...$baseButtonStyle,
   },
   buttonContent: {
-    alignItem: "center",
+    alignItems: "center",
     flexDirection: "row",
     justifyContent: "center",
   },
