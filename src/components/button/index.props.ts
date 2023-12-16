@@ -4,6 +4,7 @@ import {
   StyleProp,
   TextStyle,
   TouchableOpacityProps,
+  ViewStyle,
 } from "react-native";
 
 interface IBaseButton
@@ -41,4 +42,18 @@ export interface BaseButtonProps extends IBaseButton {
 
   Leading?: ComponentType;
   Trailing?: ComponentType;
+}
+
+export interface ITextButtonProps extends IBaseButton {
+  disabled?: boolean;
+  numberOfLines?: number;
+  /**
+   * @default false
+   * When set true, button opacity will always have value 1 whether button
+   * is disabled or not
+   */
+  keepOpacity?: boolean;
+  label: string;
+  labelStyle?: StyleProp<TextStyle>;
+  style?: StyleProp<ViewStyle>;
 }
