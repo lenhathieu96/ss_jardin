@@ -1,5 +1,7 @@
 import { useMemo } from "react";
-import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { StyleSheet, TouchableOpacity, View } from "react-native";
+
+import Text from "../text";
 
 import { BaseButtonProps } from "./index.props";
 import styles from "./styles";
@@ -66,7 +68,9 @@ export default function BaseButton({
             <Leading />
           </View>
         )}
-        <Text style={[{ color: labelColor }, labelStyle]}>{label}</Text>
+        <Text style={[{ color: labelColor }, labelStyle]} variant="subtitle2">
+          {label}
+        </Text>
         {Trailing && (
           <View style={styles.sideCtn}>
             <Trailing />

@@ -2,12 +2,13 @@ import { StyleSheet, ViewStyle } from "react-native";
 
 import { Colors, verticalScale } from "@themes";
 
-const BASE_HEIGHT = Math.max(Math.min(verticalScale(40), 48), 40);
+const BASE_HEIGHT = verticalScale(67);
 
 const $baseButtonStyle: ViewStyle = {
   justifyContent: "center",
+  alignItems: "center",
   backgroundColor: Colors.primary,
-  borderRadius: 20,
+  borderRadius: 19,
   maxHeight: BASE_HEIGHT,
   minHeight: BASE_HEIGHT,
 };

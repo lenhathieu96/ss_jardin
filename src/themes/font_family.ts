@@ -1,4 +1,4 @@
-export const FontFamilly = {
+export const FontFamily = {
   light: "Gilroy-Light",
   regular: "Gilroy-Regular",
   medium: "Gilroy-Medium",
